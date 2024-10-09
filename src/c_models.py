@@ -1,5 +1,4 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 from statsmodels.tsa.api import ExponentialSmoothing
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -15,6 +14,58 @@ from pmdarima import auto_arima
 #from pmdarima.arima import auto_arima
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.api import STLForecast
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from tensorflow.keras.preprocessing.sequence import TimeseriesGenerator
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, LSTM
+import matplotlib.pyplot as plt
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import GRU, Dense, Dropout, BatchNormalization
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.callbacks import EarlyStopping
+
+
+class LSTMModel:
+    def __init__(self, n_input, n_features, neurons, epochs):
+        self.n_input = n_input
+        self.n_features = n_features
+        self.neurons = neurons
+        self.epochs = epochs
+        self.model = self._build_model()
+        self.history = None  # Initialize history attribute
+        
+    def _build_model(self):
+        model = Sequential()
+        model.add(LSTM(self.neurons, activation='relu', input_shape=(self.n_input, self.n_features)))
+        model.add(Dense(1))
+        model.compile(optimizer='adam', loss='mse')
+        return model
+
+    def fit(self, scaled_train):
+        generator = TimeseriesGenerator(scaled_train, scaled_train, length=self.n_input, batch_size=1)
+        self.history = self.model.fit(generator, epochs=self.epochs)
+
+    def predict(self, scaled_train, test):
+        test_predictions = []
+        first_eval_batch = scaled_train[-self.n_input:]
+        current_batch = first_eval_batch.reshape((1, self.n_input, self.n_features))
+
+        for _ in range(len(test)):
+            current_pred = self.model.predict(current_batch)[0]
+            test_predictions.append(current_pred)
+            current_batch = np.append(current_batch[:, 1:, :], [[current_pred]], axis=1)
+
+        return np.array(test_predictions)
+
+    def plot_loss(self):
+        loss_per_epoch = self.model.history.history['loss']
+        plt.plot(range(len(loss_per_epoch)), loss_per_epoch)
+        plt.title('Model Loss')
+        plt.xlabel('Epochs')
+        plt.ylabel('Loss')
+        plt.show()
+
 
 
 # Holt-Winters (Exponential Smoothing) Model Class
@@ -185,13 +236,6 @@ class STLModel:
         return forecast_values, residuals_df
 
 
-    
-import matplotlib.pyplot as plt
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import GRU, Dense, Dropout, BatchNormalization
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.regularizers import l2
-from tensorflow.keras.callbacks import EarlyStopping
 
 class GRUResidualModel:
     def __init__(self, timesteps=24, features=1, gru_units=64, dropout_rate=0.2, learning_rate=0.1, l2_reg=0.01, patience=3):

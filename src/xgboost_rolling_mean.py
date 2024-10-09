@@ -1,6 +1,6 @@
 import pandas as pd
 from matplotlib import pyplot as plt
-from xgboost import XGBRegressor
+from src.xgboost_rolling_mean import XGBRegressor
 from sklearn.model_selection import train_test_split
 
 
