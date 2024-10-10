@@ -138,12 +138,12 @@ rmse_scorer = make_scorer(root_mean_squared_error)
 #print("RMSE scores for each fold:", scores)
 #print("Average RMSE:", np.mean(scores))
 
-model_var = meta_model
+model_var = lgbm
 
 
 # Fit the meta-model on the training data
 print(f"Fitting {model_var.__repr__}-model...")
-model_var.fit(x_train, y_train)
+model_var.fit(X, y)
 print(f"{model_var.__repr__}-model fitted")
 
 # Fit the meta-model on the training data
@@ -182,8 +182,8 @@ submission = pd.DataFrame({
 })
 print("Submission DataFrame created")
 print("Submission DataFrame shape:", submission.shape)
-submission.to_csv('submissiontest.csv', index=False)
-print("Submission file 'submissiontest.csv' created successfully.")
+submission.to_csv('submissiontest_full_data.csv', index=False)
+print("Submission file 'submission.csv' created successfully.")
 
 exit()
 
