@@ -118,7 +118,9 @@ This is actually surprising to me, as no autoregressive terms were used. It incl
 
 <p align="center"><em>96-hour forecast Patient 10</em></p>
 
-
+As expected, the ARIMA model quickly loses predictive power, as its predictions will continously be dependent on the last values it predicted itself.
+- **RMSE ARIMA:**  2.255367186662209
+- **SMAPE ARIMA:**  21.874553678260988
 
 
 # Competition Section
