@@ -18,6 +18,7 @@ Type 1 diabetes is more commonly diagnosed in children, teenagers, and young adu
 The global incidence of T1D is estimated to be 15 per 100,000 people per year.
 The highest incidence rates are observed in countries like Finland and Sweden, with over 60 cases per 100,000 people per year.
 In the United States, roughly 1.6 million people have Type 1 diabetes, which includes both children and adults.
+![diabetes-776999_640](https://github.com/user-attachments/assets/509b0dd9-2be9-451a-be6d-6ff6482d734a)
 
 Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
 
