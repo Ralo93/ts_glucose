@@ -157,7 +157,24 @@ As expected, the ARIMA model quickly loses predictive power, as its predictions 
 
 <p align="center"><em>96-hour forecast HW Patient 10</em></p>
 
+- **RMSE HW:**  2.257419892827335 (p04), 2.217497261484351 (p10)
+- **SMAPE HW:**  21.793447288597513 (p04), 19.368794579600998 (p10)
 
+
+Even though the metrics are just marginally better, the HW forecast at least found some seasonal pattern (here daily).
+Also from the fitting on the train data, the HW model seems to be less noisy compared to the ARIMA model:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8543c7fb-6468-49f9-b358-7310a449cdcc" alt="Diabetes Illustration" width="900"/>
+</p>
+
+<p align="center"><em>Train-Fit ARIMA</em></p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0c2198fc-683c-42f4-b237-4fe85f185114" alt="Diabetes Illustration" width="900"/>
+</p>
+
+<p align="center"><em>Train-Fit HW</em></p>
 
 
 
