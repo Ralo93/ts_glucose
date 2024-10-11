@@ -51,6 +51,27 @@ Blood glucose level prediction is a crucial task in managing diabetes. The abili
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
 
+# Approaches:
+
+My first approach was using a simple RegressionForrest to be used on the whole dataset, using AutoEncoders for each batch of feature columns, e.g. 'activities', which consists of 72 columns.
+Having 6 different autoencoders proved to be a lot of training time for each of them, so I shallowed them without having any hidden layers first. Using this approach did only yield a bad prediction power of ca. **3.1686 RMSE** against the competition testset.
+
+As a rather poor performing baseline, I decided to just leave everything as it is and run a RandomForrest Regressor having 200 estimators, simply baseN Encoding all categorical features and leaving numericals as they were - which gave me a **3.0100 RSME** on the test set.
+Switching to a more complex model, XGBoost which uses sequemtially trained, shallow trees and completing 20 different models using MLFlow on a considerable large search space yielded these hyperparameters:
+
+n_estimators=608,
+        max_depth=5,
+        learning_rate=0.04381358730114617,
+        min_child_weight=5,
+        subsample=0.8, 
+        colsample_bytree=0.8,
+        reg_alpha=0.00013679746641535526,  # L1 regularization term
+        reg_lambda=0.0005,  # L2 regularization term
+        random_state=42
+
+This actually performed quite well with **RSME  2.5821**. Repeating the same steps with an LGBMClassifier yielded a **RSME 2.5374**.
+
+
 ## How to Replicate the Solution:
 Data Preprocessing: The data is preprocessed to fill missing values, handle outliers, and adjust the time intervals.
 
