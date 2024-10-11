@@ -13,6 +13,7 @@ This is an ongoing project, check again anytime!
 ├── data/                   # Contains sample data for blood glucose levels 
 ├── notebooks/              # Jupyter notebooks demonstrating EDA, and preprocessing
 ├── images                  # Project images
+├── encoders                # AutoEncoders for each feature
 ├── src/                    # Source code for the models, the main.py, the preprocessing_main.py etc.
   └── competition           # Source code for the competition
 ├── README.md               # Project overview and instructions
