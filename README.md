@@ -78,15 +78,16 @@ Having 6 different autoencoders proved to be a lot of training time for each of 
 As a rather poor performing baseline, I decided to just leave everything as it is and run a RandomForrest Regressor having 200 estimators, simply baseN Encoding all categorical features and leaving numericals as they were - which gave me a **3.0100 RSME** on the test set.
 Switching to a more complex model, XGBoost which uses sequemtially trained, shallow trees and completing 20 different models using MLFlow on a considerable large search space yielded these hyperparameters:
 
-n_estimators=608,
-        max_depth=5,
-        learning_rate=0.04381358730114617,
-        min_child_weight=5,
-        subsample=0.8, 
-        colsample_bytree=0.8,
-        reg_alpha=0.00013679746641535526,  # L1 regularization term
-        reg_lambda=0.0005,  # L2 regularization term
-        random_state=42
+```python
+n_estimators = 608,
+max_depth = 5,
+learning_rate = 0.04381358730114617,
+min_child_weight = 5,
+subsample = 0.8, 
+colsample_bytree = 0.8,
+reg_alpha = 0.00013679746641535526,  # L1 regularization term
+reg_lambda = 0.0005,  # L2 regularization term
+random_state = 42
 
 This actually performed quite well with **RSME  2.5821**. Repeating the same steps with an LGBMClassifier yielded a **RSME 2.5374**.
 
