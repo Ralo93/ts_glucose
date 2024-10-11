@@ -27,7 +27,7 @@ Blood glucose level prediction is a crucial task in managing diabetes. The abili
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4dce3c84-32de-478a-8dfa-237be80dec0d" alt="Diabetes Illustration" width="800"/>
+  <img src="https://github.com/user-attachments/assets/4dce3c84-32de-478a-8dfa-237be80dec0d" alt="Diabetes Illustration" width="400"/>
 </p>
 
 <p align="center"><em>Source: Getty Images</em></p>
@@ -63,7 +63,7 @@ I first preprocessed each patient into an hourly sequence of datapoints. Since s
 **Discarded Patient 01**:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3c36e11a-8959-42c6-b334-3eabdd29a7fd" alt="Diabetes Illustration" width="400"/>
+  <img src="https://github.com/user-attachments/assets/3c36e11a-8959-42c6-b334-3eabdd29a7fd" alt="Diabetes Illustration" width="700"/>
 </p>
 
 
