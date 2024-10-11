@@ -106,6 +106,8 @@ AutoArima doing its thing, while given a seasonality of 24:
 The algorithm came up with the best fitting model to be ARIMA(0,0,2)(0,0,1)[24] intercept.
 This is actually surprising to me, as no autoregressive terms were used. It includes two lagged errors in the Moving Averages term, as well as one in the seasonality term. The intercept makes sense as the data does not osciallte around 0.
 
+For Patient 10 it used ARIMA(1,0,0)(0,0,1)[24] intercept.
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9bcd68dc-ea37-44d9-99ee-3c23c3175353" alt="Diabetes Illustration" width="700"/>
 </p>
@@ -119,8 +121,8 @@ This is actually surprising to me, as no autoregressive terms were used. It incl
 <p align="center"><em>96-hour forecast Patient 10</em></p>
 
 As expected, the ARIMA model quickly loses predictive power, as its predictions will continously be dependent on the last values it predicted itself.
-- **RMSE ARIMA:**  2.255367186662209
-- **SMAPE ARIMA:**  21.874553678260988
+- **RMSE ARIMA:**  2.255367186662209 (p04), 2.409850139674936 (p10)
+- **SMAPE ARIMA:**  21.874553678260988 (p04), 20.980993629909648 (p10)
 
 
 - Holt-Winters Model
