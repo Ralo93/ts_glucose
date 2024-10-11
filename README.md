@@ -57,6 +57,7 @@ The data consists of several patients' data, where each row is basically a colle
 - **LSTM**
 - **GRU**
 
+### Preprocessing
 
 I first preprocessed each patient into an hourly sequence of datapoints. Since some patients have 15min intervalls instead of 5min intervalls, and I linearly interpolate missing values, I will only consider patients with 5min intervalls going onward, as the 15min intervall patients are having too many interpolations as can be seen here:
 
@@ -73,7 +74,6 @@ I first preprocessed each patient into an hourly sequence of datapoints. Since s
 
 <p align="center"><em>Patient 04</em></p>
 
-
 Before modeling, I checked wether the data provided does have a trend and a seasonality.
 
 The adf-test result shows a clear picture:
@@ -85,6 +85,19 @@ The adf-test result shows a clear picture:
 <p align="center"><em>ADF-Test on Patient 04</em></p>
 
 
+Regarding the seasonality, there seems to be a 24 hour seasonality in the hourly data, which makes sense. Even if it is not very strong (at least for patient 04, it certainly plays a role)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/aa7ff6c1-551c-4552-ac05-cc7d74bc3112" alt="Diabetes Illustration" width="350"/>
+</p>
+
+<p align="center"><em>Seasonality Patient 04</em></p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e4dbffc7-9b91-4d2b-9439-15e12d6e4187" alt="Diabetes Illustration" width="350"/>
+</p>
+
+<p align="center"><em>Seasonality Patient 10</em></p>
 
 
 I will use a test-set of 96 hours into the future (ot the last 96 hours of the dataset). Since there was no date information given, I added date information myself which from this point in writing actually shows dates from the future, but it should not be a problem.
