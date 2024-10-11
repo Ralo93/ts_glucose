@@ -82,7 +82,7 @@ Before modeling, I checked wether the data provided does have a trend and a seas
 The adf-test result shows a clear picture:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8c6235a5-e608-4353-9fce-cd89a1d2f96b" alt="Diabetes Illustration" width="150"/>
+  <img src="https://github.com/user-attachments/assets/8c6235a5-e608-4353-9fce-cd89a1d2f96b" alt="Diabetes Illustration" width="350"/>
 </p>
 
 
