@@ -85,6 +85,9 @@ The adf-test result shows a clear picture:
   <img src="https://github.com/user-attachments/assets/8c6235a5-e608-4353-9fce-cd89a1d2f96b" alt="Diabetes Illustration" width="350"/>
 </p>
 
+<p align="center"><em>ADF-Test on Patient 04</em></p>
+
+
 
 
 I will use a test-set of 96 hours into the future (ot the last 96 hours of the dataset). Since there was no date information given, I added date information myself which from this point in writing actually shows dates from the future, but it should not be a problem.
