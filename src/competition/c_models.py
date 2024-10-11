@@ -113,9 +113,9 @@ class ARIMAModel:
         self.model = None
 
     def fit(self, train):
-        self.model = auto_arima(train, start_p=0, start_q=0, max_p=2, max_q=2, 
+        self.model = auto_arima(train, start_p=1, start_q=0, max_p=2, max_q=2, 
                                 seasonal=self.seasonal, m=self.m, 
-                                start_P=0, start_Q=0, max_P=1, max_Q=1,
+                                start_P=1, start_Q=1, max_P=1, max_Q=1,
                                 d=0, D=0, trace=True, error_action='ignore', 
                                 suppress_warnings=True, maxiter=1)
 
