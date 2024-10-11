@@ -109,7 +109,7 @@ I did not expect the ARIMA model to be very useful in this scenario, still as a 
 AutoArima doing its thing, while given a seasonality of 24:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/59fea7f3-1704-45de-8e4a-7e9c9f136c44" alt="Diabetes Illustration" width="800"/>
+  <img src="https://github.com/user-attachments/assets/59fea7f3-1704-45de-8e4a-7e9c9f136c44" alt="Diabetes Illustration" width="350"/>
 </p>
 
 <p align="center"><em>AutoArima Patient 10</em></p>
@@ -118,15 +118,16 @@ The algorithm came up with the best fitting model to be ARIMA(0,0,2)(0,0,1)[24] 
 This is actually surprising to me, as no autoregressive terms were used. It includes two lagged errors in the Moving Averages term, as well as one in the seasonality term. THe intercept makes sense as the data does not osciallte around 0.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/525ab618-a546-4264-aed3-ab33de0c9168" alt="Diabetes Illustration" width="800"/>
+  <img src="https://github.com/user-attachments/assets/525ab618-a546-4264-aed3-ab33de0c9168" alt="Diabetes Illustration" width="350"/>
 </p>
 
 <p align="center"><em>96hour forecast Patient 04</em></p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/884d28f7-64ab-4aa6-b773-54d377110d7a" alt="Diabetes Illustration" width="350"/>
+</p>
 
-![auto_arima_p04](https://github.com/user-attachments/assets/525ab618-a546-4264-aed3-ab33de0c9168)
-
-![arima_forecast_p04](https://github.com/user-attachments/assets/884d28f7-64ab-4aa6-b773-54d377110d7a)
+<p align="center"><em>96hour forecast Patient 10</em></p>
 
 
 
