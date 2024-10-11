@@ -4,7 +4,18 @@ This repository contains code and notebooks for predicting blood glucose levels 
 
 ## Project Overview
 
-Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
+This is an ongoing project.
+
+### Global Prevalence:
+Type 1 diabetes accounts for about 5-10% of all diabetes cases worldwide. Most other cases are Type 2 diabetes.
+Type 1 diabetes is more commonly diagnosed in children, teenagers, and young adults, though it can occur at any age.
+
+### Incidence and Prevalence by Region:
+The global incidence of T1D is estimated to be 15 per 100,000 people per year.
+The highest incidence rates are observed in countries like Finland and Sweden, with over 60 cases per 100,000 people per year.
+In the United States, roughly 1.6 million people have Type 1 diabetes, which includes both children and adults.
+
+### Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
 
 ### Models Used:
 
@@ -20,17 +31,23 @@ Blood glucose level prediction is a crucial task in managing diabetes. The abili
 ├── src/                    # Source code for the models
 ├── README.md               # Project overview and instructions
 ├── requirements.txt        # Python dependencies
+├── competition             # Competition files
 └── LICENSE                 # License information
+
 ```
 
 
 # Competition Section
-This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination of the ARIMA, Holt-Winters, and STL models, along with advanced techniques like GRU/LSTM for residual modeling.
+This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
 
 ## How to Replicate the Solution:
 Data Preprocessing: The data is preprocessed to fill missing values, handle outliers, and adjust the time intervals.
+
 Feature Engineering: The time-series data is enhanced by adding features such as moving averages, differences, and lag features.
+
 Modeling: We use a combination of ARIMA, Holt-Winters, and STL with GRU/LSTM for final predictions.
+
+
 Ensembling: The predictions from the different models are ensembled to improve accuracy.
 The notebooks used for the competition are available in the competition/ directory:
 
