@@ -213,7 +213,7 @@ Forecasts using STL:
 - **SMAPE STL:  26.955957807977637 (p04), 22.414167270360764 (p10)**
 
 
-The code in the repository can be used to change the patient, the test-size
+The code in the repository can be used to change the patient, the test-size and which model to run. Use the main.py file to make any changes and just run it. :)
 
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
