@@ -104,7 +104,7 @@ Regarding the seasonality, there seems to be a 24 hour seasonality in the hourly
 
 I will use a test-set of 96 hours into the future (ot the last 96 hours of the dataset). Since there was no date information given, I added date information myself which from this point in writing actually shows dates from the future, but it should not be a problem.
 
-- ARIMA Model
+# ARIMA Model
 
 I did not expect the ARIMA model to be very useful in this scenario, still as a base model it is probably interesting to look at first.
 AutoArima doing its thing, while given a seasonality of 24:
@@ -143,7 +143,7 @@ As expected, the ARIMA model quickly loses predictive power, as its predictions 
 - **SMAPE ARIMA:**  21.874553678260988 (p04), 20.980993629909648 (p10)
 
 
-- Holt-Winters Model
+# Holt-Winters Model
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/edc9472d-737a-43f7-99b7-33a33308fbbb" alt="Diabetes Illustration" width="700"/>
@@ -178,7 +178,7 @@ Also from the fitting on the train data, the HW model seems to be less noisy com
 <p align="center"><em>Train-Fit HW</em></p>
 
 
-- Seasonal-Trend-Loess (STL):
+# Seasonal-Trend-Loess (STL):
 
 STL provides a nicely formatted decomposition into trend, seasonality and residuals of the model.
 
