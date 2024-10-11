@@ -185,7 +185,7 @@ STL provides a nicely formatted decomposition into trend, seasonality and residu
 - **Strength of Trend: 0.17726872829185392** (p10)
 - **Strength of Seasonality: 0.566842163653416** (p10)
 
-This shows (as expected) there is no trend in the data, and a medium to strong seasonality.
+This shows (as expected) there is no trend in the data, and a medium to strong seasonality. For the STL forecast, I tried different seasonal_windows, here the window is 5.
 
 Decomposed it looks like this:
 
@@ -212,6 +212,8 @@ Forecasts using STL:
 - **RMSE STL:  2.7838734429804806 (p04), 2.463897980907145 (p10)**
 - **SMAPE STL:  26.955957807977637 (p04), 22.414167270360764 (p10)**
 
+
+The code in the repository can be used to change the patient, the test-size
 
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
