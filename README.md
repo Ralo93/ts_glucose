@@ -1,21 +1,25 @@
 # Blood Glucose Level Prediction Using Time Series Models
 
 This repository contains code and notebooks for predicting blood glucose levels using various time series models, including ARIMA, Holt-Winters Exponential Smoothing, and Seasonal-Trend Decomposition using Loess (STL).
+In the second half of the repository, a solution for the Bloodglucose Competition on Kaggle is provided and explained.
 
 ## Project Overview
 
-This is an ongoing project.
+This is an ongoing project, check back later!
 
 ### Global Prevalence:
 Type 1 diabetes accounts for about 5-10% of all diabetes cases worldwide. Most other cases are Type 2 diabetes.
 Type 1 diabetes is more commonly diagnosed in children, teenagers, and young adults, though it can occur at any age.
+
+
+
 
 ### Incidence and Prevalence by Region:
 The global incidence of T1D is estimated to be 15 per 100,000 people per year.
 The highest incidence rates are observed in countries like Finland and Sweden, with over 60 cases per 100,000 people per year.
 In the United States, roughly 1.6 million people have Type 1 diabetes, which includes both children and adults.
 
-### Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
+Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
 
 ### Models Used:
 
