@@ -69,7 +69,7 @@ I first preprocessed each patient into an hourly sequence of datapoints. Since s
 <p align="center"><em>Patient 01 (discarded)</em></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1c135685-54f9-4fc5-bf30-0c100551b703" alt="Diabetes Illustration" width="700" height=100/>
+  <img src="https://github.com/user-attachments/assets/1c135685-54f9-4fc5-bf30-0c100551b703" alt="Diabetes Illustration" width="700"/>
 </p>
 
 <p align="center"><em>Patient 04</em></p>
@@ -88,13 +88,13 @@ The adf-test result shows a clear picture:
 Regarding the seasonality, there seems to be a 24 hour seasonality in the hourly data, which makes sense. Even if it is not very strong (at least for patient 04, it certainly plays a role)
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/aa7ff6c1-551c-4552-ac05-cc7d74bc3112" alt="Diabetes Illustration" width="700"/>
+  <img src="https://github.com/user-attachments/assets/aa7ff6c1-551c-4552-ac05-cc7d74bc3112" alt="Diabetes Illustration" width="800" height=200/>
 </p>
 
 <p align="center"><em>Seasonality Patient 04</em></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e4dbffc7-9b91-4d2b-9439-15e12d6e4187" alt="Diabetes Illustration" width="700"/>
+  <img src="https://github.com/user-attachments/assets/e4dbffc7-9b91-4d2b-9439-15e12d6e4187" alt="Diabetes Illustration" width="800"  height=200/>
 </p>
 
 <p align="center"><em>Seasonality Patient 10</em></p>
