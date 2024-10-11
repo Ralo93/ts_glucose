@@ -104,7 +104,7 @@ Regarding the seasonality, there seems to be a 24 hour seasonality in the hourly
 
 I will use a test-set of 96 hours into the future (ot the last 96 hours of the dataset). Since there was no date information given, I added date information myself which from this point in writing actually shows dates from the future, but it should not be a problem.
 
-# ARIMA Model
+## ARIMA Model
 
 I did not expect the ARIMA model to be very useful in this scenario, still as a base model it is probably interesting to look at first.
 AutoArima doing its thing, while given a seasonality of 24:
@@ -143,7 +143,7 @@ As expected, the ARIMA model quickly loses predictive power, as its predictions 
 - **SMAPE ARIMA:**  21.874553678260988 (p04), 20.980993629909648 (p10)
 
 
-# Holt-Winters Model
+## Holt-Winters Model
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/edc9472d-737a-43f7-99b7-33a33308fbbb" alt="Diabetes Illustration" width="700"/>
@@ -178,13 +178,16 @@ Also from the fitting on the train data, the HW model seems to be less noisy com
 <p align="center"><em>Train-Fit HW</em></p>
 
 
-# Seasonal-Trend-Loess (STL):
+## Seasonal-Trend-Loess (STL):
 
 STL provides a nicely formatted decomposition into trend, seasonality and residuals of the model.
 
-- **Strength of Trend: 0.17726872829185392**
-- **Strength of Seasonality: 0.566842163653416**
+- **Strength of Trend: 0.17726872829185392** (p10)
+- **Strength of Seasonality: 0.566842163653416** (p10)
 
+This shows (as expected) there is no trend in the data, and a medium to strong seasonality.
+
+Decomposed it looks like this:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d947204b-0a67-4ed8-9d8b-23dee2f2c713" alt="Diabetes Illustration" width="900"/>
@@ -192,8 +195,23 @@ STL provides a nicely formatted decomposition into trend, seasonality and residu
 <p align="center"><em>Seasonal Decomposition p04 HW</em></p>
 
 
-- **RMSE STL:  2.7838734429804806 (p04)**
-- **SMAPE STL:  26.955957807977637 (p04)**
+Forecasts using STL:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d4f564e9-cc61-4c98-b0aa-c9ad21a828c4" alt="Diabetes Illustration" width="900"/>
+</p>
+<p align="center"><em>Forecast STL p04 HW</em></p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e6ec38ca-b66d-4870-badb-12ed702108dd" alt="Diabetes Illustration" width="900"/>
+</p>
+<p align="center"><em>Forecast STL p10 HW</em></p>
+
+
+
+- **RMSE STL:  2.7838734429804806 (p04), 2.463897980907145 (p10)**
+- **SMAPE STL:  26.955957807977637 (p04), 22.414167270360764 (p10)**
+
 
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
