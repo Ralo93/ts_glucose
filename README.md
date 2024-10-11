@@ -1,16 +1,15 @@
-# Blood Glucose Level Prediction Using Time Series Models
+# Blood Glucose Level Prediction Using Time Series and Ensemble Models
 
 This repository contains code and notebooks for predicting blood glucose levels using various time series models, including ARIMA, Holt-Winters Exponential Smoothing, and Seasonal-Trend Decomposition using Loess (STL).
 In the second half of the repository, a solution for the Bloodglucose Competition on Kaggle is provided and explained.
 
 ## Project Overview
 
-This is an ongoing project, check back later!
+This is an ongoing project, check again anytime!
 
 ### Global Prevalence:
 Type 1 diabetes accounts for about 5-10% of all diabetes cases worldwide. Most other cases are Type 2 diabetes.
 Type 1 diabetes is more commonly diagnosed in children, teenagers, and young adults, though it can occur at any age.
-
 
 
 
@@ -27,6 +26,23 @@ In the United States, roughly 1.6 million people have Type 1 diabetes, which inc
 
 
 Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
+
+### Data
+
+id - row id consisting of participant number and a count for that participant
+p_num - participant number
+time - time of day in the format HH:MM:SS
+bg-X:XX - blood glucose reading in mmol/L, X:XX(H:MM) time in the past (e.g. bg-2:35, would be the blood glucose reading from 2 hours and 35 minutes before the time value for that row), recorded by the continuous glucose monitor
+insulin-X:XX - total insulin dose received in units in the last 5 minutes, X:XX(H:MM) time in the past (e.g. insulin-2:35, would be the total insulin dose received between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), recorded by the insulin pump
+carbs-X:XX - total carbohydrate value consumed in grammes in the last 5 minutes, X:XX(H:MM) time in the past (e.g. carbs-2:35, would be the total carbohydrate value consumed between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), recorded by the participant
+hr-X:XX - mean heart rate in beats per minute in the last 5 minutes, X:XX(H:MM) time in the past (e.g. hr-2:35, would be the mean heart rate between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), recorded by the smartwatch
+steps-X:XX - total steps walked in the last 5 minutes, X:XX(H:MM) time in the past (e.g. steps-2:35, would be the total steps walked between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), recorded by the smartwatch
+cals-X:XX - total calories burnt in the last 5 minutes, X:XX(H:MM) time in the past (e.g. cals-2:35, would be the total calories burned between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), calculated by the smartwatch
+activity-X:XX - self-declared activity performed in the last 5 minutes, X:XX(H:MM) time in the past (e.g. activity-2:35, would show a string name of the activity performed between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), set on the smartwatch
+bg+1:00 - blood glucose reading in mmol/L an hour in the future, this is the value you will be predicting (not provided in test.csv)
+
+data_train.shape: 
+data_test.shape: 
 
 ### Models Used:
 
