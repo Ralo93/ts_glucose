@@ -19,10 +19,11 @@ The highest incidence rates are observed in countries like Finland and Sweden, w
 In the United States, roughly 1.6 million people have Type 1 diabetes, which includes both children and adults.
 
 <p align="center">
-  <img src="[https://github.com/user-attachments/assets/4dce3c84-32de-478a-8dfa-237be80dec0d]" alt="Diabetes Illustration" width="400"/>
+  <img src="https://github.com/user-attachments/assets/4dce3c84-32de-478a-8dfa-237be80dec0d" alt="Diabetes Illustration" width="400"/>
 </p>
 
-<p align="center"><em>Source: Pixabay</em></p>
+
+<p align="center"><em>Source: Getty Images</em></p>
 
 
 Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
