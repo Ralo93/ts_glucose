@@ -217,6 +217,8 @@ Forecasts using STL:
 
 The code in the repository can be used to change the patient, the test-size and which model to run. Use the main.py file to make any changes and just run it. :)
 
+Next Steps include Using LSTM and GRU to learn residuals
+
 
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
