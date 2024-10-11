@@ -37,7 +37,7 @@ Blood glucose level prediction is a crucial task in managing diabetes. The abili
 ## Repository Structure
 
 ```text
-├── data/                   # Contains sample data for blood glucose levels
+├── data/                   # Contains sample data for blood glucose levels (not pushed to the repo but you can get it at: https://www.kaggle.com/competitions/brist1d/data
 ├── notebooks/              # Jupyter notebooks demonstrating model implementation
 ├── src/                    # Source code for the models
 ├── README.md               # Project overview and instructions
