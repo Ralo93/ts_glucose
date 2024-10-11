@@ -7,13 +7,24 @@ In the second half of the repository, a solution for the Bloodglucose Competitio
 
 This is an ongoing project, check again anytime!
 
+## Repository Structure
+
+```text
+├── data/                   # Contains sample data for blood glucose levels (not pushed to the repo but you can get it at: https://www.kaggle.com/competitions/brist1d/data
+├── notebooks/              # Jupyter notebooks demonstrating EDA, and preprocessing
+├── src/                    # Source code for the models, the main.py, the preprocessing_main.py etc.
+├── README.md               # Project overview and instructions
+├── requirements.txt        # Python dependencies
+├── competition             # Competition files
+└── LICENSE                 # License information
+
+```
 ### Global Prevalence:
 Type 1 diabetes accounts for about 5-10% of all diabetes cases worldwide. Most other cases are Type 2 diabetes.
 Type 1 diabetes is more commonly diagnosed in children, teenagers, and young adults, though it can occur at any age.
 
 Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
 
-### Data
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4dce3c84-32de-478a-8dfa-237be80dec0d" alt="Diabetes Illustration" width="400"/>
@@ -21,6 +32,7 @@ Blood glucose level prediction is a crucial task in managing diabetes. The abili
 
 <p align="center"><em>Source: Getty Images</em></p>
 
+### Data
 
 The data consists of several patients' data, where each row is basically a collection of 5min intervalls with corresponding information. It was collected using Continous Glucose Monitoring.
 
@@ -39,24 +51,16 @@ The data consists of several patients' data, where each row is basically a colle
 data_train.shape: 
 data_test.shape: 
 
-### Models Used:
+  
+
+
+### Models Used in Time Series Forecasting:
 
 - **ARIMA (AutoRegressive Integrated Moving Average):** A popular statistical model that captures temporal dependencies in the data.
 - **Holt-Winters Exponential Smoothing:** A method that accounts for seasonality in the data, which is especially useful when glucose levels follow a cyclical pattern.
 - **STL Decomposition (Seasonal-Trend decomposition using Loess):** This method breaks down the time series data into trend, seasonal, and residual components. The residuals can be further modeled using advanced methods like GRU/LSTM for improved forecasting accuracy.
-
-## Repository Structure
-
-```text
-├── data/                   # Contains sample data for blood glucose levels (not pushed to the repo but you can get it at: https://www.kaggle.com/competitions/brist1d/data
-├── notebooks/              # Jupyter notebooks demonstrating EDA, and preprocessing
-├── src/                    # Source code for the models, the main.py, the preprocessing_main.py etc.
-├── README.md               # Project overview and instructions
-├── requirements.txt        # Python dependencies
-├── competition             # Competition files
-└── LICENSE                 # License information
-
-```
+- **LSTM**
+- **GRU**
 
 
 # Competition Section
