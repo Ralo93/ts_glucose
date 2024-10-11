@@ -91,13 +91,14 @@ xgb = Pipeline(steps=[
     ('preprocessor', preprocessor),
     ('regressor', XGBRegressor(
         tree_method='hist',
-        n_estimators=300,
-        max_depth=3,
-        learning_rate=0.2,
+        n_estimators=608,
+        max_depth=5,
+        learning_rate=0.04381358730114617,
+        min_child_weight=5,
         subsample=0.8, 
         colsample_bytree=0.8,
-        reg_alpha=0.1,  # L1 regularization term
-        reg_lambda=0.3,  # L2 regularization term
+        reg_alpha=0.00013679746641535526,  # L1 regularization term
+        reg_lambda=0.0005,  # L2 regularization term
         random_state=42
     ))
 ])
@@ -106,11 +107,11 @@ xgb = Pipeline(steps=[
 lgbm = Pipeline(steps=[
     ('preprocessor', preprocessor),
     ('regressor', LGBMRegressor(
-        n_estimators=330,
-        max_depth=3,
-        learning_rate=0.23,
+        n_estimators=608,
+        max_depth=5,
+        learning_rate=0.04381358730114617,
         subsample=0.8, 
-        colsample_bytree=0.8,
+        colsample_bytree=0.8516886888374169,
         reg_alpha=0.1,  # L1 regularization term
         reg_lambda=0.2,  # L2 regularization term
         random_state=42,
@@ -138,7 +139,7 @@ rmse_scorer = make_scorer(root_mean_squared_error)
 #print("RMSE scores for each fold:", scores)
 #print("Average RMSE:", np.mean(scores))
 
-model_var = lgbm
+model_var = xgb
 
 
 # Fit the meta-model on the training data
