@@ -63,6 +63,13 @@ I first preprocessed each patient into an hourly sequence of datapoints. Since s
 
 <p align="center"><em>Patient 04</em></p>
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/927647c4-7ce8-453b-ba49-4660bb448fea" alt="Diabetes Illustration" width="700"/>
+</p>
+
+<p align="center"><em>Patient 10</em></p>
+
+
 Before modeling, I checked wether the data provided does have a trend and a seasonality.
 
 The adf-test result shows a clear picture:
