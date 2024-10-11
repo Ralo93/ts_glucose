@@ -69,7 +69,7 @@ I first preprocessed each patient into an hourly sequence of datapoints. Since s
 <p align="center"><em>Patient 01 (discarded)</em></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1c135685-54f9-4fc5-bf30-0c100551b703" alt="Diabetes Illustration" width="700"/>
+  <img src="https://github.com/user-attachments/assets/1c135685-54f9-4fc5-bf30-0c100551b703" alt="Diabetes Illustration" width="700" height=100/>
 </p>
 
 <p align="center"><em>Patient 04</em></p>
