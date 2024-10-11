@@ -52,19 +52,19 @@ I first preprocessed each patient into an hourly sequence of datapoints. Since s
 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/3c36e11a-8959-42c6-b334-3eabdd29a7fd" alt="Diabetes Illustration" width="700"/>
+  <img src="https://github.com/user-attachments/assets/3c36e11a-8959-42c6-b334-3eabdd29a7fd" alt="p10 Illustration" width="700"/>
 </p>
 
 <p align="center"><em>Patient 01 (discarded)</em></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/1c135685-54f9-4fc5-bf30-0c100551b703" alt="Diabetes Illustration" width="700"/>
+  <img src="https://github.com/user-attachments/assets/1c135685-54f9-4fc5-bf30-0c100551b703" alt="p04 Illustration" width="700"/>
 </p>
 
 <p align="center"><em>Patient 04</em></p>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/927647c4-7ce8-453b-ba49-4660bb448fea" alt="Diabetes Illustration" width="700"/>
+  <img src="https://github.com/user-attachments/assets/927647c4-7ce8-453b-ba49-4660bb448fea" alt="p10 Illustration" width="700"/>
 </p>
 
 <p align="center"><em>Patient 10</em></p>
