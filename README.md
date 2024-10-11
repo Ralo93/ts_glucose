@@ -29,6 +29,8 @@ Blood glucose level prediction is a crucial task in managing diabetes. The abili
 
 ### Data
 
+The data consists of several patients' data, where each row is basically a collection of 5min intervalls with corresponding information:
+
 - id - row id consisting of participant number and a count for that participant
 - p_num - participant number
 - time - time of day in the format HH:MM:SS
