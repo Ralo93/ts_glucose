@@ -1,6 +1,6 @@
 # Blood Glucose Level Prediction Using Time Series and Ensemble Models
 
-This repository contains code and notebooks for predicting blood glucose levels using various time series models, including ARIMA, Holt-Winters Exponential Smoothing, and Seasonal-Trend Decomposition using Loess (STL).
+This repository contains code and notebooks for predicting blood glucose levels on an hourly basis using various time series models, including ARIMA, Holt-Winters Exponential Smoothing, and Seasonal-Trend Decomposition using Loess (STL).
 In the second half of the repository, a solution for the Bloodglucose Competition on Kaggle is provided and explained.
 
 ## Project Overview
@@ -57,8 +57,8 @@ data_test.shape:
 
 ```text
 ├── data/                   # Contains sample data for blood glucose levels (not pushed to the repo but you can get it at: https://www.kaggle.com/competitions/brist1d/data
-├── notebooks/              # Jupyter notebooks demonstrating model implementation
-├── src/                    # Source code for the models
+├── notebooks/              # Jupyter notebooks demonstrating EDA, and preprocessing
+├── src/                    # Source code for the models, the main.py, the preprocessing_main.py etc.
 ├── README.md               # Project overview and instructions
 ├── requirements.txt        # Python dependencies
 ├── competition             # Competition files
