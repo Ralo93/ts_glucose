@@ -69,9 +69,10 @@ The adf-test result shows a clear picture:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8c6235a5-e608-4353-9fce-cd89a1d2f96b" alt="Diabetes Illustration" width="350"/>
+  <img src="https://github.com/user-attachments/assets/394ec3dd-e831-4c4c-8f63-596f6e43bb2e" alt="Trend P10" width="350"/>
 </p>
 
-<p align="center"><em>ADF-Test on Patient 04</em></p>
+<p align="center"><em>ADF-Test on Patient 04 and 10</em></p>
 
 
 Regarding the seasonality, there seems to be a 24 hour seasonality in the hourly data, which makes sense. Even if it is not very strong (at least for patient 04, it certainly plays a role)
