@@ -48,11 +48,6 @@ The data consists of several patients' data, where each row is basically a colle
 - activity-X:XX - self-declared activity performed in the last 5 minutes, X:XX(H:MM) time in the past (e.g. activity-2:35, would show a string name of the activity performed between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), set on the smartwatch
 - bg+1:00 - blood glucose reading in mmol/L an hour in the future, this is the value you will be predicting (not provided in test.csv)
 
-*data_train.shape: *
-*data_test.shape: *
-
-  
-
 
 ### Models Used in Time Series Forecasting:
 
@@ -61,6 +56,21 @@ The data consists of several patients' data, where each row is basically a colle
 - **STL Decomposition (Seasonal-Trend decomposition using Loess):** This method breaks down the time series data into trend, seasonal, and residual components. The residuals can be further modeled using advanced methods like GRU/LSTM for improved forecasting accuracy.
 - **LSTM**
 - **GRU**
+
+
+I first preprocessed each patient into an hourly sequence of datapoints. Since some patients have 15min intervalls instead of 5min intervalls, and I linearly interpolate missing values, I will only consider patients with 5min intervalls going onward, as the 15min intervall patients are having too many interpolations:
+
+**Discarded Patient 01**:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3c36e11a-8959-42c6-b334-3eabdd29a7fd" alt="Diabetes Illustration" width="400"/>
+</p>
+
+
+
+- ARIMA Model
+
+
 
 
 # Competition Section
