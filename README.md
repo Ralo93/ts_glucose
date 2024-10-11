@@ -164,19 +164,36 @@ As expected, the ARIMA model quickly loses predictive power, as its predictions 
 Even though the metrics are just marginally better, the HW forecast at least found some seasonal pattern (here daily).
 Also from the fitting on the train data, the HW model seems to be less noisy compared to the ARIMA model:
 
+
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8543c7fb-6468-49f9-b358-7310a449cdcc" alt="Diabetes Illustration" width="900"/>
 </p>
-
 <p align="center"><em>Train-Fit ARIMA</em></p>
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0c2198fc-683c-42f4-b237-4fe85f185114" alt="Diabetes Illustration" width="900"/>
 </p>
-
 <p align="center"><em>Train-Fit HW</em></p>
 
 
+- Seasonal-Trend-Loess (STL):
+
+STL provides a nicely formatted decomposition into trend, seasonality and residuals of the model.
+
+- **Strength of Trend: 0.17726872829185392**
+- **Strength of Seasonality: 0.566842163653416**
+
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d947204b-0a67-4ed8-9d8b-23dee2f2c713" alt="Diabetes Illustration" width="900"/>
+</p>
+<p align="center"><em>Seasonal Decomposition p04 HW</em></p>
+
+
+- **RMSE STL:  2.7838734429804806 (p04)**
+- **SMAPE STL:  26.955957807977637 (p04)**
 
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
