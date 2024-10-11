@@ -48,8 +48,8 @@ The data consists of several patients' data, where each row is basically a colle
 - activity-X:XX - self-declared activity performed in the last 5 minutes, X:XX(H:MM) time in the past (e.g. activity-2:35, would show a string name of the activity performed between 2 hours and 40 minutes and 2 hours and 35 minutes before the time value for that row), set on the smartwatch
 - bg+1:00 - blood glucose reading in mmol/L an hour in the future, this is the value you will be predicting (not provided in test.csv)
 
-data_train.shape: 
-data_test.shape: 
+*data_train.shape: *
+*data_test.shape: *
 
   
 
