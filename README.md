@@ -92,6 +92,8 @@ random_state = 42
 
 This actually performed quite well with **RSME  2.5821**. Repeating the same steps with an LGBMClassifier yielded a **RSME 2.5374**.
 
+The next iteration of modeling will consist of an ensemble model, which shall utilize a SVR and a NN, in combination with a Forrest Regressor to form an ensemble.
+
 
 ## How to Replicate the Solution:
 Data Preprocessing: The data is preprocessed to fill missing values, handle outliers, and adjust the time intervals.
