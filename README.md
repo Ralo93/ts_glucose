@@ -18,19 +18,19 @@ The global incidence of T1D is estimated to be 15 per 100,000 people per year.
 The highest incidence rates are observed in countries like Finland and Sweden, with over 60 cases per 100,000 people per year.
 In the United States, roughly 1.6 million people have Type 1 diabetes, which includes both children and adults.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/4dce3c84-32de-478a-8dfa-237be80dec0d" alt="Diabetes Illustration" width="400"/>
-</p>
-
-
-<p align="center"><em>Source: Getty Images</em></p>
-
 
 Blood glucose level prediction is a crucial task in managing diabetes. The ability to forecast glucose levels helps individuals make informed decisions about their diet, insulin intake, and lifestyle choices. In this project, we leverage time series analysis to predict blood glucose levels based on historical data.
 
 ### Data
 
-The data consists of several patients' data, where each row is basically a collection of 5min intervalls with corresponding information:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4dce3c84-32de-478a-8dfa-237be80dec0d" alt="Diabetes Illustration" width="400"/>
+</p>
+
+<p align="center"><em>Source: Getty Images</em></p>
+
+
+The data consists of several patients' data, where each row is basically a collection of 5min intervalls with corresponding information. It was collected using Continous Glucose Monitoring.
 
 - id - row id consisting of participant number and a count for that participant
 - p_num - participant number
