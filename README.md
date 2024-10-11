@@ -58,7 +58,7 @@ The data consists of several patients' data, where each row is basically a colle
 - **GRU**
 
 
-I first preprocessed each patient into an hourly sequence of datapoints. Since some patients have 15min intervalls instead of 5min intervalls, and I linearly interpolate missing values, I will only consider patients with 5min intervalls going onward, as the 15min intervall patients are having too many interpolations:
+I first preprocessed each patient into an hourly sequence of datapoints. Since some patients have 15min intervalls instead of 5min intervalls, and I linearly interpolate missing values, I will only consider patients with 5min intervalls going onward, as the 15min intervall patients are having too many interpolations as can be seen here:
 
 **Discarded Patient 01**:
 
@@ -77,6 +77,17 @@ I first preprocessed each patient into an hourly sequence of datapoints. Since s
 <p align="center"><em>Patient 04</em></p>
 
 
+Before modeling, I checked wether the data provided does have a trend and a seasonality.
+
+The adf-test result shows a clear picture:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8c6235a5-e608-4353-9fce-cd89a1d2f96b" alt="Diabetes Illustration" width="700"/>
+</p>
+
+
+
+I will use a test-set of 96 hours into the future (ot the last 96 hours of the dataset). Since there was no date information given, I added date information myself which from this point in writing actually shows dates from the future, but it should not be a problem.
 
 - ARIMA Model
 
