@@ -123,6 +123,24 @@ As expected, the ARIMA model quickly loses predictive power, as its predictions 
 - **SMAPE ARIMA:**  21.874553678260988
 
 
+- Holt-Winters Model
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/edc9472d-737a-43f7-99b7-33a33308fbbb" alt="Diabetes Illustration" width="700"/>
+</p>
+
+<p align="center"><em>96-hour forecast HW Patient 04</em></p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2e51c6a5-56d4-48ef-a94a-5c0e459a2350" alt="Diabetes Illustration" width="700"/>
+</p>
+
+<p align="center"><em>96-hour forecast HW Patient 10</em></p>
+
+
+
+
+
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
 
