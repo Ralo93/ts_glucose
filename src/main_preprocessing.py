@@ -1,10 +1,9 @@
-from c_preprocessing import *
-from c_helpers import *
+from competition.c_preprocessing import *
+from competition.c_helpers import *
 
 patient = "p02"
 # Example usage:
-preprocessing = BloodGlucosePreprocessing(r"C:\Users\rapha\repositories\ts_glucose\data\raw/blood_glucose/train.csv")
-
+preprocessing = BloodGlucosePreprocessing("data/raw/blood_glucose/train.csv")
 preprocessing.downcast_floats()
 print(preprocessing.df.shape)
 print(preprocessing.df)
@@ -34,4 +33,4 @@ cont = check_continuous_datetime_index(preprocessing.df)
 print(cont)
 
 
-preprocessing.save_patient_data(patient=patient, save_path=r"C:\Users\rapha\repositories\ts_glucose\data/processed/cleaned_up_patients")
+preprocessing.save_patient_data(patient=patient, save_path="data/processed/cleaned_up_patients")
