@@ -115,19 +115,21 @@ AutoArima doing its thing, while given a seasonality of 24:
 <p align="center"><em>AutoArima Patient 10</em></p>
 
 The algorithm came up with the best fitting model to be ARIMA(0,0,2)(0,0,1)[24] intercept.
-This is actually surprising to me, as no autoregressive terms were used. It includes two lagged errors in the Moving Averages term, as well as one in the seasonality term. THe intercept makes sense as the data does not osciallte around 0.
+This is actually surprising to me, as no autoregressive terms were used. It includes two lagged errors in the Moving Averages term, as well as one in the seasonality term. The intercept makes sense as the data does not osciallte around 0.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9bcd68dc-ea37-44d9-99ee-3c23c3175353" alt="Diabetes Illustration" width="700"/>
 </p>
 
-<p align="center"><em>96hour forecast Patient 04</em></p>
+<p align="center"><em>96-hour forecast Patient 04</em></p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/28c6dfac-15b3-41c4-b094-ab9c5b5a17c3" alt="Diabetes Illustration" width="700"/>
 </p>
 
-<p align="center"><em>96hour forecast Patient 10</em></p>
+<p align="center"><em>96-hour forecast Patient 10</em></p>
+
+
 
 
 # Competition Section
