@@ -21,6 +21,8 @@ Blood glucose level prediction is a crucial task in managing diabetes. The abili
 ├── README.md               # Project overview and instructions
 ├── requirements.txt        # Python dependencies
 └── LICENSE                 # License information
+```
+
 
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination of the ARIMA, Holt-Winters, and STL models, along with advanced techniques like GRU/LSTM for residual modeling.
