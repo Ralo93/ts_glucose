@@ -200,13 +200,12 @@ Forecasts using STL:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d4f564e9-cc61-4c98-b0aa-c9ad21a828c4" alt="Diabetes Illustration" width="900"/>
 </p>
-<p align="center"><em>Forecast STL p04 HW</em></p>
+<p align="center"><em>Forecast STL p04</em></p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e6ec38ca-b66d-4870-badb-12ed702108dd" alt="Diabetes Illustration" width="900"/>
 </p>
-<p align="center"><em>Forecast STL p10 HW</em></p>
-
+<p align="center"><em>Forecast STL p10</em></p>
 
 
 - **RMSE STL:  2.7838734429804806 (p04), 2.463897980907145 (p10)**
