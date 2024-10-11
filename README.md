@@ -12,6 +12,7 @@ This is an ongoing project, check again anytime!
 ```text
 ├── data/                   # Contains sample data for blood glucose levels 
 ├── notebooks/              # Jupyter notebooks demonstrating EDA, and preprocessing
+├── images                  # Project images
 ├── src/                    # Source code for the models, the main.py, the preprocessing_main.py etc.
 ├── README.md               # Project overview and instructions
 ├── requirements.txt        # Python dependencies
@@ -139,8 +140,10 @@ For Patient 10 it used ARIMA(1,0,0)(0,0,1)[24] intercept.
 <p align="center"><em>96-hour forecast Patient 10</em></p>
 
 As expected, the ARIMA model quickly loses predictive power, as its predictions will continously be dependent on the last values it predicted itself.
-- **RMSE ARIMA:**  2.255367186662209 (p04), 2.409850139674936 (p10)
-- **SMAPE ARIMA:**  21.874553678260988 (p04), 20.980993629909648 (p10)
+The metrics are therefore taken not quite serious, but its a starting point.
+
+- **RMSE ARIMA:**  2.255 (p04), 2.409 (p10)
+- **SMAPE ARIMA:**  21.874 (p04), 20.980 (p10)
 
 
 ## Holt-Winters Model
@@ -157,8 +160,8 @@ As expected, the ARIMA model quickly loses predictive power, as its predictions 
 
 <p align="center"><em>96-hour forecast HW Patient 10</em></p>
 
-- **RMSE HW:**  2.257419892827335 (p04), 2.217497261484351 (p10)
-- **SMAPE HW:**  21.793447288597513 (p04), 19.368794579600998 (p10)
+- **RMSE HW:**  2.2574 (p04), 2.217 (p10)
+- **SMAPE HW:**  21.793 (p04), 19.368(p10)
 
 
 Even though the metrics are just marginally better, the HW forecast at least found some seasonal pattern (here daily).
@@ -182,10 +185,10 @@ Also from the fitting on the train data, the HW model seems to be less noisy com
 
 STL provides a nicely formatted decomposition into trend, seasonality and residuals of the model.
 
-- **Strength of Trend: 0.17726872829185392** (p10)
-- **Strength of Seasonality: 0.566842163653416** (p10)
+- **Strength of Trend: 0.177** (p10)
+- **Strength of Seasonality: 0.566** (p10)
 
-This shows (as expected) there is no trend in the data, and a medium to strong seasonality. For the STL forecast, I tried different seasonal_windows, here the window is 5.
+This shows (as expected) there is no trend in the data, and a medium to strong seasonality. For the STL forecast, I tried different seasonal_windows, here the window is 5. This hyperparameter tells me how many "seasons" in the past it should take into consideration for its forecast.
 
 Decomposed it looks like this:
 
@@ -208,21 +211,22 @@ Forecasts using STL:
 <p align="center"><em>Forecast STL p10</em></p>
 
 
-- **RMSE STL:  2.7838734429804806 (p04), 2.463897980907145 (p10)**
-- **SMAPE STL:  26.955957807977637 (p04), 22.414167270360764 (p10)**
+- **RMSE STL:  2.783 (p04), 2.463(p10)**
+- **SMAPE STL:  26.955(p04), 22.414 (p10)**
 
 
 The code in the repository can be used to change the patient, the test-size and which model to run. Use the main.py file to make any changes and just run it. :)
+
 
 # Competition Section
 This repository also includes the solution to a blood glucose prediction competition. The solution leverages a combination XGBoost, Lightgbm, NN and SVR to get to a reasonably good score (currently placed 42th).
 
 # Approaches:
 
-My first approach was using a simple RegressionForrest to be used on the whole dataset, using AutoEncoders for each batch of feature columns, e.g. 'activities', which consists of 72 columns.
+My first approach was using a simple RandomForrest Regressor to be used on the whole dataset, using AutoEncoders for each batch of feature columns, e.g. 'activities', which consists of 72 columns.
 Having 6 different autoencoders proved to be a lot of training time for each of them, so I shallowed them without having any hidden layers first. Using this approach did only yield a bad prediction power of ca. **3.1686 RMSE** against the competition testset.
 
-As a rather poor performing baseline, I decided to just leave everything as it is and run a RandomForrest Regressor having 200 estimators, simply baseN Encoding all categorical features and leaving numericals as they were - which gave me a **3.0100 RSME** on the test set.
+As a rather poor performing baseline, I decided to just leave everything as it is and run a RandomForrest Regressor having 200 estimators, simply baseN-Encoding all categorical features and leaving numericals as they were - which gave me a **3.0100 RSME** on the test set.
 Switching to a more complex model, XGBoost which uses sequemtially trained, shallow trees and completing 20 different models using MLFlow on a considerable large search space yielded these hyperparameters:
 
 ```python
