@@ -60,15 +60,12 @@ The data consists of several patients' data, where each row is basically a colle
 
 I first preprocessed each patient into an hourly sequence of datapoints. Since some patients have 15min intervalls instead of 5min intervalls, and I linearly interpolate missing values, I will only consider patients with 5min intervalls going onward, as the 15min intervall patients are having too many interpolations as can be seen here:
 
-**Discarded Patient 01**:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3c36e11a-8959-42c6-b334-3eabdd29a7fd" alt="Diabetes Illustration" width="700"/>
 </p>
 
-<p align="center"><em>Patient 01</em></p>
-
-**Patient 04**:
+<p align="center"><em>Patient 01 (discarded)</em></p>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1c135685-54f9-4fc5-bf30-0c100551b703" alt="Diabetes Illustration" width="700"/>
