@@ -31,12 +31,12 @@ bg = df['bg']
 test_size = 96
 train, test = model_selection.train_test_split(bg, train_size=len(bg)-test_size)
 print(train.shape)
-plt.plot(df)
-plt.show()
+#plt.plot(df)
+#plt.show()
 
-plot_acf(df.bg, lags=100);
-adf_test(df)
-plt.show()
+#plot_acf(df.bg, lags=100);
+#adf_test(df)
+#plt.show()
 
 #df = pd.DataFrame(df)
 #df['time'] = pd.to_datetime(df['time'])
@@ -48,20 +48,20 @@ plt.show()
 arima_model = ARIMAModel(seasonal=True, m=24)
 arima_model.fit(train)
 arima_forecast = arima_model.forecast(steps=len(test))
-arima_model.plot(train, test, arima_forecast)
-arima_model.plot_train(train)
-print("RMSE ARIMA: ", rmse(test, arima_forecast))
-print("SMAPE ARIMA: ", smape(test, arima_forecast))
+#arima_model.plot(train, test, arima_forecast)
+#arima_model.plot_train(train)
+#print("RMSE ARIMA: ", rmse(test, arima_forecast))
+#print("SMAPE ARIMA: ", smape(test, arima_forecast))
 
 #exit()
 ## Holt-Winters Model
 hw_model = HWModel(seasonal_periods=24, trend=None, seasonal='add')
 hw_model.fit(train)
 hw_forecast = hw_model.forecast(steps=len(test))#
-hw_model.plot(train, test, hw_forecast)
-hw_model.plot_train(train)
-print("RMSE HW: ", rmse(test, hw_forecast))
-print("SMAPE HW: ", smape(test, hw_forecast))
+#hw_model.plot(train, test, hw_forecast)
+#hw_model.plot_train(train)
+#print("RMSE HW: ", rmse(test, hw_forecast))
+#print("SMAPE HW: ", smape(test, hw_forecast))
 
 
 # STL Model with Forecasting            MUST BE ODD
@@ -69,10 +69,10 @@ stl_model = STLModel(period=24, seasonal_window=3, trend=False)
 stl_model.decompose(train)
 stl_model.fit(train, 'h')
 stl_forecast, test_residual_df = stl_model.forecast(train, test, steps=test_size)
-stl_model.plot(train, test, stl_forecast)
-stl_model.plot_train(train)
-print("RMSE STL: ", rmse(test, stl_forecast))
-print("SMAPE STL: ", smape(test, stl_forecast))
+#stl_model.plot(train, test, stl_forecast)
+#stl_model.plot_train(train)
+#print("RMSE STL: ", rmse(test, stl_forecast))
+#print("SMAPE STL: ", smape(test, stl_forecast))
 # Assuming res_df comes from STL decomposition (residuals DataFrame)
 
 exit()

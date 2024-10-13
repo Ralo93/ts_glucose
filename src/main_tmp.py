@@ -183,7 +183,6 @@ print(f'Linear Regression Coefficients: {meta_model.coef_}')
 
 
 
-
 ### LSTM MODEL:
 test_size = 96
 n_input = 72
