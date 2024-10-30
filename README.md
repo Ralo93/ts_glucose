@@ -217,7 +217,7 @@ Forecasts using STL:
 
 The code in the repository can be used to change the patient, the test-size and which model to run. Use the main.py file to make any changes and just run it. :)
 
-Next Steps include Using LSTM and GRU to learn residuals
+Next Steps include Using LSTM and GRU to learn residuals.
 
 
 # Competition Section
