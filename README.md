@@ -46,7 +46,6 @@ It can be found here: https://www.kaggle.com/competitions/brist1d/data
 - **Holt-Winters Exponential Smoothing:** A method that accounts for seasonality in the data, which is especially useful when glucose levels follow a cyclical pattern.
 - **STL Decomposition (Seasonal-Trend decomposition using Loess):** This method breaks down the time series data into trend, seasonal, and residual components. The residuals can be further modeled using advanced methods like GRU/LSTM for improved forecasting accuracy.
 - **LSTM**
-- **GRU**
 
 ### Preprocessing
 
