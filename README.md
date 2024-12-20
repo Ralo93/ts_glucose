@@ -5,20 +5,6 @@
 This repository contains code and notebooks for predicting blood glucose levels on an hourly basis using various time series models, including ARIMA, Holt-Winters Exponential Smoothing, and Seasonal-Trend Decomposition using Loess (STL).
 In the second half of the repository, a solution for the Bloodglucose Competition on Kaggle is provided and explained.
 
-## Repository Structure
-
-```text
-├── data/                   # Contains sample data for blood glucose levels 
-├── notebooks/              # Jupyter notebooks demonstrating EDA, and preprocessing
-├── images                  # Project images
-├── encoders                # AutoEncoders for each feature
-├── src/                    # Source code for the models, the main.py, the preprocessing_main.py etc.
-  └── competition           # Source code for the competition
-├── README.md               # Project overview and instructions
-├── requirements.txt        # Python dependencies
-└── LICENSE                 # License information
-
-```
 ### Global Prevalence:
 Type 1 diabetes accounts for about 5-10% of all diabetes cases worldwide. Most other cases are Type 2 diabetes.
 Type 1 diabetes is more commonly diagnosed in children, teenagers, and young adults, though it can occur at any age.
