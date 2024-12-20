@@ -5,8 +5,6 @@
 This repository contains code and notebooks for predicting blood glucose levels on an hourly basis using various time series models, including ARIMA, Holt-Winters Exponential Smoothing, and Seasonal-Trend Decomposition using Loess (STL).
 In the second half of the repository, a solution for the Bloodglucose Competition on Kaggle is provided and explained.
 
-This is an ongoing project, check again anytime!
-
 ## Repository Structure
 
 ```text
